@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Task Management System</title>
+</head>
+<body>
+  <div class="container">
+      <div class="header">
+        <img class="i1" src="pm.png" alt="Logo 1">
+        <h1 class="heading">Task Management System</h1>
+        <img class="i2" src="pm1.png" alt="Logo 2">
+      </div>
+    <div class="content">
+      <div class="options">
+        <button onclick="showAssignTaskForm()">Assign Task</button>
+      </div>
+    
+      <div id="addUserForm" class="form" style="display: none;">
+        <h2>Add User with UID</h2>
+        <input type="text" id="uidInput" placeholder="Enter UID">
+        <input type="text" id="userNameInput" placeholder="Enter User Name">
+        <button onclick="addUser()">Add User</button>
+      </div>
+
+      <div id="assignTaskForm" class="form" style="display: none;">
+        <h2>Assign Task</h2>
+        <input type="text" id="taskInput" placeholder="Enter a task">
+        <input type="text" id="assignedUserInput" placeholder="Enter User Name">
+        <button onclick="assignTask()">Assign Task</button>
+      </div>
+
+      <div class="taskList" id="taskListContainer" style="display: none;">
+        <h2>Task List</h2>
+        <ul id="taskList"></ul>
+      </div>
+
+      <div id="taskStatusForm" class="form" style="display: none;">
+        <h2>Task Status Update</h2>
+        <button onclick="updateTaskStatus('Completed')">Completed</button>
+        <button onclick="updateTaskStatus('In Progress')">In Progress</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 SriDa Solutions</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
